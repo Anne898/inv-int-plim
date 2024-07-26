@@ -158,6 +158,14 @@
         }, 1000);
       });
 
+        video.addEventListener('click', function () {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+
       video.addEventListener('timeupdate', function () {
         var currentTime = video.currentTime;
 
@@ -184,6 +192,7 @@
         botonAsistencia.style.opacity = '0';
         botonAsistencia.style.pointerEvents = 'none';
       });
+      
 
       document.getElementById('video').addEventListener('contextmenu', function (e) {
         e.preventDefault();
@@ -208,6 +217,8 @@
       });
     });
   </script>
+
+  
 </body>
 
 </html>
